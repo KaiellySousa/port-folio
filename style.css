@@ -1,0 +1,606 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: #000;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #aaa;
+}
+
+
+body {
+    background-color: #fff;
+    color: #111;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: #000;
+    padding: 12px 25px;
+}
+
+
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.perfil {
+    background-color: white;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.foto-perfil {
+    width: 150px;
+    border-radius: 50%;
+    border: 4px solid black;
+}
+
+.texto-header {
+    max-width: 500px;
+}
+
+.texto-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.texto-header p {
+    font-size: 1.1rem;
+    color: #444;
+}
+.lado-direito {
+    display: flex;
+    align-items: center;
+}
+
+.botao-curriculo {
+    background-color: #bdbdbd;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.botao-curriculo:hover {
+    background-color: black;
+    color: white;
+}
+@media (max-width: 768px) {
+    .container-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-perfil {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lado-direito {
+        justify-content: center;
+        margin-top: 15px;
+    }
+}
+/* parte de projetos */
+.projetos, .habilidades {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.projetos h2, .habilidades h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #000;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.grid-projetos, .grid-habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card-projeto, .card-habilidade {
+    background-color: white;
+    color: black;
+    padding: 25px;
+    border-radius: 16px;
+    border: 2px solid #000;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    text-align: justify;
+}
+
+.card-projeto:hover, .card-habilidade:hover {
+    transform: translateY(-8px);
+    background-color: #000;
+    color: white;
+    border: 2px solid white;
+}
+
+.card-projeto h3, .card-habilidade h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: black;
+    transition: color 0.3s;
+}
+
+.card-projeto:hover h3, .card-habilidade:hover h3 {
+    color: white;
+}
+
+.card-projeto p {
+    margin-bottom: 10px;
+}
+
+.card-projeto ul, .card-habilidade ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card-projeto li, .card-habilidade li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.card-habilidade li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #555;
+    font-weight: bold;
+}
+
+.card-habilidade:hover li::before {
+    color: white;
+}
+
+
+.tag {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin: 3px 5px 3px 0;
+    font-weight: bold;
+    border: 1px solid black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tag:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.botao-ver-mais {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    padding: 10px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid black;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.botao-ver-mais:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    border-top: 2px solid #333;
+    margin-top: 100px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+footer .social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+footer .social img {
+    width: 30px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+footer .social img:hover {
+    transform: scale(1.2);
+    filter: brightness(0) invert(0.5);
+}
+
+
+@media (max-width: 768px) {
+    .grid-projetos, .grid-habilidades {
+        grid-template-columns: 1fr;
+    }
+
+    .container-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foto-perfil {
+        width: 150px;
+        margin: 0 0 20px 0;
+    }
+
+    .texto-header {
+        text-align: center;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+    .botao-curriculo {
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+.container-botao {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.container-botao {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.botao-ver-mais {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid black;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.botao-ver-mais:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+.arrumar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px 0;
+}
+
+.arrumar p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.arrumar .social a img {
+    width: 24px;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    border-top: 2px solid #333;
+    padding: 10px 0;
+    margin-top: auto; /* Faz o rodapé ficar sempre no final */
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #111;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+
+.navbar {
+    background-color: #000;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    color: #aaa;
+}
+
+/* --------- PROJETOS --------- */
+.projetos {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.projetos h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #000;
+    border-bottom: 2px solid #000;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card-projeto {
+    background-color: white;
+    color: black;
+    padding: 25px;
+    border-radius: 16px;
+    border: 2px solid #000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: relative;
+}
+.titulo-com-github {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .github-link img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .github-link img:hover {
+    transform: scale(1.2);
+  }
+
+.card-projeto h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card-projeto p {
+    margin-bottom: 10px;
+}
+
+.conteudo-extra {
+    display: none;
+    margin-top: 15px;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card-projeto.ativo .conteudo-extra {
+    display: block;
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+@media (max-width: 1024px) {
+    .grid-projetos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-projetos {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.tag {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin: 3px 5px 3px 0;
+    font-weight: bold;
+    border: 1px solid black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tag:hover {
+    background-color: black;
+    color: white;
+}
+
+
+footer {
+    background-color: #000;
+    padding: 10px 0;
+    text-align: center;
+    color: white;
+}
+
+footer p {
+    font-weight: bold;
+}
+
+footer .social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+footer .social img {
+    width: 30px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s, filter 0.3s;
+}
+
+footer .social img:hover {
+    transform: scale(1.2);
+    filter: brightness(0) invert(0.5);
+}
+
+/* --------- RESPONSIVO --------- */
+@media (max-width: 768px) {
+    .grid-projetos {
+        grid-template-columns: 1fr;
+    }
+}
+.botao-ver-mais {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 15px;
+    background-color: #bdbdbd;
+}
+@media (max-width: 768px) {
+    .container-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .logo {
+        margin-bottom: 10px;
+    }
+
+    .navbar .nav-links {
+        flex-direction: row; /* Ficar em linha */
+        flex-wrap: wrap;     /* Quebrar se necessário */
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+
+
+
+
+
