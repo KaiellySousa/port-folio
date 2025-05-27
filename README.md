@@ -1,4 +1,4 @@
-# Meu Primeiro Portfólio
+# Portfólio
 
 Este é o meu primeiro portfólio. Ainda tem bastante coisa para melhorar, principalmente no design, mas como não sou muito boa nessa parte, decidi usar o clássico preto e branco.
 
